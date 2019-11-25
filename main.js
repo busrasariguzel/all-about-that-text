@@ -6,10 +6,17 @@ const resultBiggify = document.querySelector(".biggify").addEventListener('click
 });
 
 const resultNasafy = document.querySelector(".nasafy").addEventListener('click', function(){
+    for (const element of nasafy()){
     let inputBox1 = document.querySelector('#user-input').value
-    
-    document.querySelector(".result").innerText = nasafy(Number(inputBox1))
-});
+    newOl = document.createElement('ol')
+    newLi= document.createElement('li')
+    newList = newLi.appendChild(newOl)
+    answer = document.querySelector('.result').appendChild(newList).innerText = nasafy(Number(inputBox1))
+    }
+    });
+
+
+
 
 const resultCrazify = document.querySelector(".crazify").addEventListener('click', function(){
     let inputBox2 = document.querySelector('#user-input').value
